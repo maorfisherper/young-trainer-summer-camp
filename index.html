@@ -777,6 +777,89 @@
     .wa-float .wa-stack .main { font-size: 16px; }
     .wa-float .wa-stack .lead { font-size: 11px; }
   }
+
+  /* ============ MOBILE IMPROVEMENTS ============ */
+  html { scroll-behavior: smooth; }
+
+  /* Eyebrow: wrap text instead of overflowing on narrow screens */
+  @media (max-width: 600px) {
+    .eyebrow {
+      white-space: normal;
+      text-align: center;
+      justify-content: center;
+      max-width: 100%;
+      font-size: 16px;
+      padding: 14px 20px;
+      gap: 10px;
+    }
+  }
+
+  /* Hero: tighter heading + padding on very small screens */
+  @media (max-width: 420px) {
+    .hero { padding: 24px 0 40px; }
+    .hero h1 { font-size: 40px; }
+  }
+
+  /* Hero sub: smaller on mobile */
+  @media (max-width: 700px) {
+    .hero-sub { font-size: 17px; line-height: 1.5; }
+  }
+
+  /* Hero CTA: full-width stacked button on mobile */
+  @media (max-width: 500px) {
+    .hero-cta { flex-direction: column; align-items: stretch; }
+    .hero-cta .btn { width: 100%; justify-content: center; }
+  }
+
+  /* Section text: reduce lead size on mobile */
+  @media (max-width: 700px) {
+    .section-lead { font-size: 16px; }
+  }
+
+  /* Features: reset photo-card row span in single column, shrink cards */
+  @media (max-width: 460px) {
+    .feat-card.c-photo { grid-row: span 1 !important; }
+    .feat-card { padding: 20px 18px 18px; min-height: 150px; }
+    .feat-title { font-size: 17px; }
+    .feat-desc { font-size: 13.5px; }
+  }
+
+  /* Facility: reduce card padding, collapse feature list to 1 col */
+  @media (max-width: 700px) {
+    .fac-card { padding: 24px; }
+    .fac-features { grid-template-columns: 1fr; gap: 12px; }
+  }
+
+  /* Schedule side card: reduce padding */
+  @media (max-width: 700px) {
+    .sched-side { padding: 24px 22px; }
+    .sched-side h3 { font-size: 22px; }
+  }
+
+  /* Pricing: tighter padding on small screens */
+  @media (max-width: 500px) {
+    .price-card { padding: 24px 20px; border-radius: 22px; gap: 20px; }
+  }
+
+  /* Final CTA: stack buttons full-width on mobile */
+  @media (max-width: 500px) {
+    .final-cta-lead { font-size: 17px; }
+    .final-cta-btns { flex-direction: column; align-items: stretch; }
+    .final-cta-btns .btn { width: 100%; justify-content: center; }
+  }
+
+  /* Footer bottom: stack and center on small screens */
+  @media (max-width: 500px) {
+    .foot-bottom { flex-direction: column; align-items: center; text-align: center; }
+  }
+
+  /* WA float: tighter on very narrow screens */
+  @media (max-width: 380px) {
+    .wa-float { left: 8px; padding: 11px 14px 11px 12px; }
+    .wa-float svg { width: 20px; height: 20px; }
+    .wa-float .wa-stack .main { font-size: 13px; }
+    .wa-float .wa-stack .lead { font-size: 10px; }
+  }
 </style>
 </head>
 <body>
