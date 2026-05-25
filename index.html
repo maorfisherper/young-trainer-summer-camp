@@ -1,0 +1,1221 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>קייטנת המאלף הצעיר · קיץ 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&family=Frank+Ruhl+Libre:wght@500;700;900&display=swap" rel="stylesheet">
+<template id="__bundler_thumbnail" data-bg-color="#fff7e6">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#fff7e6"/>
+    <circle cx="600" cy="380" r="230" fill="#1b2a4e"/>
+    <g fill="#ffcc1a" transform="translate(600 380)">
+      <ellipse cx="-70" cy="-10" rx="34" ry="44"/>
+      <ellipse cx="-25" cy="-70" rx="30" ry="40"/>
+      <ellipse cx="35" cy="-70" rx="30" ry="40"/>
+      <ellipse cx="80" cy="-10" rx="34" ry="44"/>
+      <path d="M-90 80 C-90 20, -40 0, 0 0 C40 0, 90 20, 90 80 C90 130, 50 150, 0 150 C-50 150, -90 130, -90 80 Z"/>
+    </g>
+    <circle cx="930" cy="170" r="58" fill="#e63946"/>
+    <circle cx="230" cy="600" r="48" fill="#1f88e5"/>
+  </svg>
+</template>
+<style>
+  :root {
+    --cream: #fff5d2;
+    --cream-2: #ffe97a;
+    --paper: #fffcef;
+    --ink: #1a2a4d;
+    --ink-soft: #2e3f64;
+    --muted: #6b7a99;
+    --terra: #ff2d7a;
+    --terra-deep: #d11860;
+    --forest: #1a99f0;
+    --forest-deep: #0a72be;
+    --sun: #ffd400;
+    --sun-deep: #f5b400;
+    --lime: #aedd2e;
+    --line: rgba(26,42,77,0.16);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Rubik', system-ui, -apple-system, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .display { font-family: 'Frank Ruhl Libre', 'Rubik', serif; font-weight: 900; letter-spacing: -0.01em; }
+  h1, h2, h3 { margin: 0; line-height: 1.1; }
+  p { margin: 0; }
+  a { color: inherit; }
+  img { display: block; max-width: 100%; }
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+  @media (max-width: 700px) { .container { padding: 0 20px; } }
+  @media (max-width: 380px) { .container { padding: 0 16px; } }
+
+  /* ============ NAV ============ */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(247, 241, 227, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 12px;
+    font-weight: 800; font-size: 18px;
+  }
+  .logo-mark {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--ink); color: var(--cream);
+    display: grid; place-items: center;
+    font-size: 22px;
+  }
+  .logo-mark svg { width: 22px; height: 22px; }
+  .logo small { display: block; font-size: 11px; color: var(--muted); font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 28px; font-size: 15px; font-weight: 500; }
+  .nav-links a { text-decoration: none; color: var(--ink-soft); }
+  .nav-links a:hover { color: var(--terra); }
+  @media (max-width: 800px) { .nav-links a:not(.btn) { display: none; } }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: 999px;
+    font-weight: 700; font-size: 15px;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: transform .15s ease, background .15s ease, color .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--terra); color: white; }
+  .btn-primary:hover { background: var(--terra-deep); }
+  .btn-dark { background: var(--ink); color: var(--cream); }
+  .btn-dark:hover { background: #000; }
+  .btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+  .btn-ghost:hover { background: var(--ink); color: var(--cream); }
+  .btn-wa { background: #25D366; color: white; }
+  .btn-wa:hover { background: #1faa54; }
+
+  /* ============ HERO ============ */
+  .hero {
+    padding: 56px 0 80px;
+    position: relative;
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px;
+    align-items: center;
+  }
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+    .hero { padding: 36px 0 56px; }
+    .hero-grid > div:first-child { text-align: center; }
+    .hero-grid > div:first-child .hero-cta { justify-content: center; }
+    .hero-grid > div:first-child .hero-meta { justify-content: center; }
+    .hero-grid > div:first-child .hero-sub { margin-inline: auto; }
+    .hero h1 { text-align: center; }
+    .hero-photo {
+      aspect-ratio: 4/3;
+      max-width: 380px;
+      margin: 0 auto;
+      border-radius: 22px;
+    }
+  }
+  @media (max-width: 480px) {
+    .hero-photo { max-width: 300px; aspect-ratio: 1/1; }
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 16px;
+    background: var(--sun); border: 4px solid var(--ink);
+    padding: 22px 36px; border-radius: 999px;
+    font-size: 26px; font-weight: 900; color: var(--ink);
+    margin-bottom: 32px;
+    box-shadow: 6px 6px 0 var(--ink);
+    transform: rotate(-1.5deg);
+    letter-spacing: -0.01em;
+    line-height: 1;
+  }
+  .eyebrow svg { width: 32px; height: 32px; }
+  .eyebrow .dot { width: 14px; height: 14px; background: var(--terra); border-radius: 50%; animation: pulse 1.6s infinite; box-shadow: 0 0 0 5px rgba(230,57,70,0.3); }
+  @media (max-width: 700px) {
+    .eyebrow { font-size: 18px; padding: 16px 24px; border-width: 3px; box-shadow: 4px 4px 0 var(--ink); }
+    .eyebrow svg { width: 24px; height: 24px; }
+  }
+
+  /* cycle patches under the headline */
+  .cycle-patches {
+    display: flex; gap: 10px; flex-wrap: nowrap;
+    margin: 28px 0 8px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .cycle-patch {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--cream); border: 2.5px solid var(--ink);
+    padding: 9px 14px 9px 16px; border-radius: 12px;
+    box-shadow: 3px 3px 0 var(--ink);
+    font-weight: 800; line-height: 1;
+    transition: transform .15s ease;
+    white-space: nowrap;
+  }
+  .cycle-patch:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--ink); }
+  .cycle-patch:nth-child(1) { background: var(--sun); transform: rotate(-1.5deg); }
+  .cycle-patch:nth-child(2) { background: #cfe6ff; transform: rotate(1deg); }
+  .cycle-patch:nth-child(3) { background: #ffd9d9; transform: rotate(-0.5deg); }
+  .cycle-patch:hover { transform: translate(-1px, -1px) rotate(0deg); }
+  .cycle-patch .n {
+    background: var(--ink); color: var(--cream);
+    font-family: 'Frank Ruhl Libre', serif; font-weight: 900;
+    width: 22px; height: 22px; border-radius: 50%;
+    display: inline-grid; place-items: center;
+    font-size: 13px; flex-shrink: 0; align-self: center;
+  }
+  .cycle-patch .d {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 900; font-size: 20px;
+    direction: ltr; color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  @media (max-width: 900px) {
+    .hero-grid > div:first-child .cycle-patches { justify-content: center; }
+  }
+  @media (max-width: 480px) {
+    .cycle-patches { gap: 6px; }
+    .cycle-patch { padding: 7px 10px; gap: 6px; box-shadow: 2px 2px 0 var(--ink); border-width: 2px; }
+    .cycle-patch .d { font-size: 14px; }
+    .cycle-patch .n { width: 18px; height: 18px; font-size: 11px; }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: .5; transform: scale(1.3); }
+  }
+  .hero h1 {
+    font-size: clamp(48px, 6vw, 88px);
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    line-height: 0.96;
+    margin-bottom: 24px;
+  }
+  .hero h1 .word-2 { color: var(--terra); display: inline-block; }
+  .hero h1 .stamp {
+    display: inline-block; transform: rotate(-3deg);
+    background: var(--sun); padding: 2px 18px 6px;
+    border-radius: 14px; color: var(--ink);
+  }
+  .hero-sub { font-size: 21px; color: var(--ink-soft); max-width: 520px; margin-bottom: 32px; line-height: 1.45; }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 28px; }
+  .hero-cta .btn { padding: 16px 28px; font-size: 16px; }
+  .hero-meta { display: flex; gap: 28px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line); }
+  @media (max-width: 700px) { .hero-meta { gap: 18px; padding-top: 20px; } .hero-meta-item { min-width: 90px; flex: 1 1 40%; } }
+  .hero-meta-item { display: flex; flex-direction: column; }
+  .hero-meta-k { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px; }
+  .hero-meta-v { font-size: 17px; font-weight: 700; }
+
+  /* Hero photo */
+  .hero-photo {
+    position: relative;
+    aspect-ratio: 4/5;
+    border-radius: 28px;
+    overflow: hidden;
+    background: var(--ink);
+    box-shadow: 0 30px 80px -30px rgba(31,36,24,0.4);
+  }
+  .hero-photo img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .photo-badge {
+    position: absolute;
+    top: 24px; left: 24px;
+    background: var(--cream);
+    padding: 14px 18px;
+    border-radius: 18px;
+    display: flex; align-items: center; gap: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  .photo-badge-dot {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--forest); color: white;
+    display: grid; place-items: center;
+    font-weight: 800; font-size: 18px;
+  }
+  .photo-badge-text { font-size: 13px; line-height: 1.3; }
+  .photo-badge-text strong { display: block; font-size: 15px; }
+
+  .ticker {
+    position: absolute;
+    bottom: -1px; right: -1px; left: -1px;
+    background: rgba(31,36,24,0.85);
+    color: var(--cream);
+    padding: 16px 22px;
+    font-size: 14px; font-weight: 500;
+    display: flex; gap: 28px;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+  }
+  .ticker span { white-space: nowrap; }
+  .ticker .star { color: var(--sun); margin-inline-start: 28px; }
+
+  /* ============ MARQUEE ============ */
+  .marquee {
+    background: var(--ink); color: var(--cream);
+    padding: 20px 0;
+    overflow: hidden;
+    border-block: 1px solid var(--ink);
+  }
+  .marquee-track {
+    display: flex; gap: 44px;
+    animation: scroll 32s linear infinite;
+    white-space: nowrap;
+    font-size: 22px; font-weight: 700;
+    font-family: 'Frank Ruhl Libre', serif;
+  }
+  .marquee-track span { display: inline-flex; align-items: center; gap: 44px; }
+  .marquee-track .sep { color: var(--terra); }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(50%); }
+  }
+
+  /* ============ SECTIONS ============ */
+  section { padding: 96px 0; }
+  @media (max-width: 800px) { section { padding: 64px 0; } }
+  .section-head { margin-bottom: 56px; max-width: 760px; }
+  @media (max-width: 700px) { .section-head { margin-bottom: 36px; } }
+  .section-kicker { font-size: 13px; font-weight: 700; color: var(--terra); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; }
+  .section-title { font-size: clamp(36px, 4.5vw, 60px); font-weight: 900; letter-spacing: -0.02em; line-height: 1; margin-bottom: 18px; }
+  .section-lead { font-size: 19px; color: var(--ink-soft); line-height: 1.5; }
+
+  /* ============ ABOUT ============ */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
+    align-items: center;
+  }
+  @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 36px; } }
+  .about-img { aspect-ratio: 5/4; border-radius: 24px; overflow: hidden; }
+  .about-img img { width: 100%; height: 100%; object-fit: cover; }
+  .about-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+  .pill {
+    background: white; border: 1px solid var(--line);
+    padding: 8px 16px; border-radius: 999px;
+    font-size: 14px; font-weight: 600;
+  }
+  .pill.green { background: var(--forest); color: white; border-color: var(--forest); }
+  .pill.terra { background: var(--terra); color: white; border-color: var(--terra); }
+
+  /* ============ FEATURES (מה מייחד אותנו) ============ */
+  .features {
+    background: #d6ecff;
+    border-block: 1px solid var(--line);
+  }
+  .feat-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    grid-auto-flow: dense;
+  }
+  @media (max-width: 1100px) { .feat-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 760px) { .feat-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+  @media (max-width: 460px) { .feat-grid { grid-template-columns: 1fr; } }
+  .feat-card {
+    border-radius: 22px;
+    padding: 26px 24px 24px;
+    border: 3px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+    position: relative;
+    transition: transform .15s ease, box-shadow .15s ease;
+    color: var(--ink);
+    overflow: hidden;
+    min-height: 180px;
+    display: flex; flex-direction: column; justify-content: flex-end;
+  }
+  .feat-card:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--ink); }
+  .feat-card.c-yellow { background: var(--sun); }
+  .feat-card.c-pink { background: var(--terra); color: white; }
+  .feat-card.c-blue { background: var(--forest); color: white; }
+  .feat-card.c-lime { background: var(--lime); }
+  .feat-card.c-photo { min-height: 0; }
+  .feat-card.c-photo:hover { transform: translate(-2px, -2px); }
+  .feat-photo {
+    width: 100%; height: 100%;
+    min-height: 180px;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 3px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+    aspect-ratio: 4/5;
+  }
+  .feat-photo img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform .4s ease;
+  }
+  .feat-photo:hover img { transform: scale(1.05); }
+  .feat-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: rgba(255,255,255,0.5);
+    color: var(--ink);
+    display: grid; place-items: center; margin-bottom: 14px;
+    border: 2.5px solid var(--ink);
+  }
+  .feat-card.c-pink .feat-icon,
+  .feat-card.c-blue .feat-icon { background: rgba(255,255,255,0.92); color: var(--ink); }
+  .feat-icon svg { width: 24px; height: 24px; }
+  .feat-title { font-size: 20px; font-weight: 900; margin-bottom: 4px; line-height: 1.15; letter-spacing: -0.01em; }
+  .feat-desc { font-size: 14.5px; font-weight: 500; line-height: 1.4; opacity: .9; }
+  .feat-card.c-pink .feat-desc, .feat-card.c-blue .feat-desc { opacity: .95; }
+
+  /* ============ SCHEDULE ============ */
+  .schedule {
+    background: var(--ink); color: var(--cream);
+  }
+  .schedule .section-title { color: var(--cream); }
+  .schedule .section-kicker { color: var(--sun); }
+  .schedule .section-lead { color: rgba(247,241,227,0.7); }
+  .sched-wrap {
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px;
+    align-items: start;
+  }
+  @media (max-width: 900px) { .sched-wrap { grid-template-columns: 1fr; } }
+  .sched-list { display: flex; flex-direction: column; gap: 0; }
+  .sched-row {
+    display: grid; grid-template-columns: 150px 16px 1fr;
+    align-items: center;
+    gap: 24px; padding: 22px 0;
+    border-bottom: 1px solid rgba(255,247,230,0.15);
+  }
+  .sched-row:last-child { border-bottom: none; }
+  .sched-time {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700; font-size: 24px;
+    color: var(--sun);
+    font-variant-numeric: tabular-nums;
+    direction: ltr; text-align: start;
+  }
+  .sched-act { font-size: 18px; font-weight: 500; }
+  .sched-dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--terra);
+    box-shadow: 0 0 0 4px rgba(230,57,70,0.25);
+  }
+  @media (max-width: 700px) {
+    .sched-row { grid-template-columns: 1fr; gap: 4px; padding: 16px 0; }
+    .sched-dot { display: none; }
+    .sched-time { font-size: 20px; }
+  }
+  .sched-side {
+    background: var(--forest);
+    border-radius: 24px;
+    padding: 36px;
+    color: var(--cream);
+  }
+  .sched-side-kicker { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sun); margin-bottom: 12px; }
+  .sched-side h3 { font-size: 28px; font-weight: 900; margin-bottom: 14px; }
+  .sched-side p { color: rgba(247,241,227,0.82); margin-bottom: 20px; }
+  .sched-side .meta { display: flex; flex-direction: column; gap: 10px; padding-top: 22px; border-top: 1px solid rgba(247,241,227,0.18); }
+  .sched-side .meta div { display: flex; justify-content: space-between; font-size: 15px; }
+  .sched-side .meta strong { font-weight: 700; }
+
+  /* ============ CYCLES ============ */
+  .cycles {
+    background: var(--terra);
+    color: white;
+    padding: 64px 0;
+    border-block: 4px solid var(--ink);
+  }
+  .cycles-head {
+    text-align: center; margin-bottom: 32px;
+  }
+  .cycles-head .kicker {
+    display: inline-block; background: var(--sun); color: var(--ink);
+    padding: 8px 18px; border-radius: 999px; font-weight: 800;
+    font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 14px;
+    border: 2.5px solid var(--ink); box-shadow: 3px 3px 0 var(--ink);
+  }
+  .cycles-head h2 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(32px, 4vw, 48px); font-weight: 900;
+    color: white; line-height: 1.05;
+  }
+  .cycles-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    max-width: 1000px; margin: 0 auto;
+  }
+  @media (max-width: 800px) { .cycles-grid { grid-template-columns: 1fr; } }
+  .cycle-card {
+    background: var(--cream); color: var(--ink);
+    border: 3px solid var(--ink); border-radius: 22px;
+    padding: 26px 26px 24px;
+    box-shadow: 6px 6px 0 var(--ink);
+    text-align: start;
+    position: relative;
+    transition: transform .15s ease;
+  }
+  .cycle-card:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--ink); }
+  .cycle-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--forest); color: white;
+    width: 36px; height: 36px; border-radius: 50%;
+    font-family: 'Frank Ruhl Libre', serif; font-weight: 900;
+    font-size: 18px;
+    border: 2.5px solid var(--ink);
+    margin-bottom: 14px;
+  }
+  .cycle-dates {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 900; font-size: 38px;
+    line-height: 1; margin-bottom: 6px;
+    direction: ltr; text-align: start;
+    letter-spacing: -0.02em;
+  }
+  .cycle-dates .sl { color: var(--terra); }
+  .cycle-label { font-size: 14px; font-weight: 700; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 14px; }
+  .cycle-days { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; padding-top: 14px; border-top: 2px dashed var(--line); }
+  .cycle-day {
+    background: var(--sun); border: 2px solid var(--ink); color: var(--ink);
+    width: 30px; height: 30px; border-radius: 8px;
+    display: grid; place-items: center;
+    font-weight: 800; font-size: 13px;
+    font-variant-numeric: tabular-nums;
+  }
+  .cycle-paw {
+    position: absolute;
+    top: -16px; left: 16px;
+    width: 40px; height: 40px;
+    background: var(--sun);
+    border: 3px solid var(--ink);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    box-shadow: 3px 3px 0 var(--ink);
+    transform: rotate(-12deg);
+  }
+  .cycle-paw svg { width: 22px; height: 22px; color: var(--ink); }
+
+  /* ============ FACILITY ============ */
+  .facility-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 36px;
+    align-items: stretch;
+  }
+  @media (max-width: 900px) { .facility-grid { grid-template-columns: 1fr; } }
+  .fac-card {
+    background: white; border: 1px solid var(--line);
+    border-radius: 24px; padding: 36px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .fac-card.dark { background: var(--terra); color: white; border-color: var(--terra); }
+  .fac-features {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+    margin-top: 28px;
+  }
+  .fac-feat { display: flex; gap: 12px; align-items: flex-start; }
+  .fac-feat-i {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: var(--cream-2); color: var(--forest);
+    display: grid; place-items: center; flex-shrink: 0;
+  }
+  .fac-card.dark .fac-feat-i { background: rgba(255,255,255,0.18); color: white; }
+  .fac-feat-i svg { width: 18px; height: 18px; }
+  .fac-feat-t { font-size: 15px; font-weight: 600; line-height: 1.3; }
+  .fac-photo {
+    aspect-ratio: 4/3; border-radius: 24px; overflow: hidden;
+  }
+  .fac-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* ============ PRICING ============ */
+  .pricing {
+    background: linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
+  }
+  .price-card {
+    background: white;
+    border-radius: 32px;
+    padding: 48px;
+    max-width: 920px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+    align-items: center;
+    border: 1px solid var(--line);
+    box-shadow: 0 30px 80px -40px rgba(31,36,24,0.25);
+    position: relative;
+    overflow: hidden;
+  }
+  @media (max-width: 800px) { .price-card { grid-template-columns: 1fr; padding: 32px; gap: 28px; } }
+  .price-card::before {
+    content: ""; position: absolute; top: -40px; right: -40px;
+    width: 200px; height: 200px; background: var(--sun);
+    border-radius: 50%; opacity: 0.35;
+  }
+  .price-tag {
+    display: inline-block; background: var(--sun); color: var(--ink);
+    padding: 9px 18px; border-radius: 12px;
+    font-size: 15px; font-weight: 800; margin-bottom: 18px;
+    position: relative; z-index: 1;
+    border: 2.5px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+    transform: rotate(-1.5deg);
+    letter-spacing: -0.005em;
+    line-height: 1.1;
+  }
+  .price-main {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 900;
+    font-size: clamp(64px, 8vw, 96px);
+    line-height: 1; color: var(--ink);
+    margin-bottom: 8px; position: relative; z-index: 1;
+    direction: ltr; text-align: start;
+  }
+  .price-main .sym { color: var(--terra); }
+  .price-sub { color: var(--ink-soft); font-size: 16px; position: relative; z-index: 1; }
+  .price-list { display: flex; flex-direction: column; gap: 14px; }
+  .price-list li {
+    display: flex; gap: 12px; align-items: flex-start;
+    list-style: none;
+  }
+  .price-list ul { padding: 0; margin: 0; }
+  .check {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--terra); color: white;
+    display: grid; place-items: center; flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .check svg { width: 16px; height: 16px; }
+  .price-list-text { font-size: 16px; font-weight: 500; }
+
+  /* ============ FINAL CTA ============ */
+  .final-cta {
+    background: var(--forest); color: var(--cream);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before, .final-cta::after {
+    content: ""; position: absolute; width: 320px; height: 320px;
+    border-radius: 50%; background: var(--forest-deep);
+    opacity: 0.5;
+  }
+  .final-cta::before { top: -120px; right: -120px; }
+  .final-cta::after { bottom: -160px; left: -120px; }
+  .final-cta .container { position: relative; z-index: 1; }
+  .final-cta .section-title { color: var(--cream); margin-bottom: 20px; }
+  .final-cta-lead { font-size: 20px; color: rgba(247,241,227,0.8); max-width: 580px; margin: 0 auto 36px; }
+  .final-cta-btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .final-cta-btns .btn { padding: 18px 32px; font-size: 17px; }
+  .final-cta-btns .btn-ghost { color: var(--cream); border-color: var(--cream); }
+  .final-cta-btns .btn-ghost:hover { background: var(--cream); color: var(--forest); }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--ink); color: var(--cream);
+    padding: 48px 0 32px;
+  }
+  .foot-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 36px;
+    padding-bottom: 32px; border-bottom: 1px solid rgba(247,241,227,0.15);
+  }
+  @media (max-width: 700px) { .foot-grid { grid-template-columns: 1fr; gap: 24px; } }
+  .foot-grid h4 { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sun); margin-bottom: 12px; }
+  .foot-grid p { color: rgba(247,241,227,0.7); font-size: 15px; line-height: 1.6; }
+  .foot-grid a { color: rgba(247,241,227,0.8); text-decoration: none; display: block; font-size: 15px; padding: 3px 0; }
+  .foot-grid a:hover { color: var(--sun); }
+  .foot-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 24px; font-size: 13px; color: rgba(247,241,227,0.5);
+    flex-wrap: wrap; gap: 12px;
+  }
+
+  /* ============ PAW DECORATIONS ============ */
+  .paw {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    display: block;
+    will-change: transform;
+  }
+  .paw svg { display: block; width: 100%; height: 100%; }
+  .paw-trail {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    overflow: hidden;
+  }
+  .paw-trail .paw { position: absolute; }
+  .has-paws { position: relative; }
+  .has-paws > .container { position: relative; z-index: 2; }
+
+  /* paw bullet in lists */
+  .paw-bullet {
+    display: inline-flex; flex-shrink: 0;
+    width: 26px; height: 26px;
+    align-items: center; justify-content: center;
+    color: var(--terra);
+  }
+  .paw-bullet svg { width: 100%; height: 100%; }
+
+  /* dashed paw divider */
+  .paw-divider {
+    display: flex; align-items: center; justify-content: center;
+    gap: 14px;
+    padding: 24px 0; margin: 0;
+    color: var(--terra);
+  }
+  .paw-divider svg { width: 26px; height: 26px; opacity: 0.85; }
+  .paw-divider .ln { flex: 1; height: 0; border-top: 2.5px dashed currentColor; max-width: 220px; opacity: 0.5; }
+
+  /* ===== ROBUST PAW ANIMATIONS ===== */
+  /* Bob — vertical floating */
+  @keyframes pawBob {
+    0%, 100% { transform: translate3d(0, 0, 0) rotate(var(--r, 0deg)) scale(var(--s, 1)); }
+    50%      { transform: translate3d(0, -14px, 0) rotate(calc(var(--r, 0deg) + 4deg)) scale(var(--s, 1)); }
+  }
+  /* Drift — slow diagonal sway */
+  @keyframes pawDrift {
+    0%, 100% { transform: translate3d(0, 0, 0) rotate(var(--r, 0deg)) scale(var(--s, 1)); }
+    25%  { transform: translate3d(8px, -10px, 0) rotate(calc(var(--r, 0deg) - 6deg)) scale(var(--s, 1)); }
+    50%  { transform: translate3d(0, -18px, 0) rotate(var(--r, 0deg)) scale(var(--s, 1)); }
+    75%  { transform: translate3d(-8px, -10px, 0) rotate(calc(var(--r, 0deg) + 6deg)) scale(var(--s, 1)); }
+  }
+  /* Spin — slow rotation */
+  @keyframes pawSpin {
+    0%   { transform: rotate(0deg) scale(var(--s, 1)); }
+    100% { transform: rotate(360deg) scale(var(--s, 1)); }
+  }
+  /* Pulse — opacity + scale heartbeat */
+  @keyframes pawPulse {
+    0%, 100% { transform: rotate(var(--r, 0deg)) scale(var(--s, 1)); opacity: var(--o, 0.5); }
+    50%      { transform: rotate(var(--r, 0deg)) scale(calc(var(--s, 1) * 1.18)); opacity: calc(var(--o, 0.5) * 1.6); }
+  }
+  /* Tracks — paw prints walking across (translateX) */
+  @keyframes pawWalk {
+    0%   { transform: translateX(0) rotate(var(--r, 0deg)); opacity: 0; }
+    10%  { opacity: var(--o, 0.6); }
+    90%  { opacity: var(--o, 0.6); }
+    100% { transform: translateX(var(--walk-dist, -100vw)) rotate(var(--r, 0deg)); opacity: 0; }
+  }
+  /* Fall — falling paw confetti */
+  @keyframes pawFall {
+    0%   { transform: translateY(-20px) rotate(0deg); opacity: 0; }
+    10%  { opacity: var(--o, 0.7); }
+    90%  { opacity: var(--o, 0.7); }
+    100% { transform: translateY(120vh) rotate(360deg); opacity: 0; }
+  }
+
+  .paw.bob    { animation: pawBob   5s ease-in-out infinite; }
+  .paw.bob1   { animation: pawBob   5s ease-in-out infinite; }
+  .paw.bob2   { animation: pawBob   6.5s ease-in-out infinite reverse; }
+  .paw.drift  { animation: pawDrift 9s ease-in-out infinite; }
+  .paw.drift2 { animation: pawDrift 11s ease-in-out infinite reverse; }
+  .paw.spin   { animation: pawSpin  14s linear infinite; }
+  .paw.spinR  { animation: pawSpin  18s linear infinite reverse; }
+  .paw.pulse  { animation: pawPulse 3s ease-in-out infinite; }
+  .paw.fall   { animation: pawFall var(--dur, 8s) linear infinite; animation-delay: var(--delay, 0s); }
+
+  /* Walking paw-print track (a sequence) */
+  .paw-track {
+    position: absolute; pointer-events: none; z-index: 0;
+    display: flex; gap: 14px; align-items: center;
+    --walk-dist: -110vw;
+  }
+  .paw-track .paw { position: static; animation: pawWalk var(--dur, 22s) linear infinite; }
+  .paw-track .paw:nth-child(1) { animation-delay: 0s; }
+  .paw-track .paw:nth-child(2) { animation-delay: -0.4s; }
+  .paw-track .paw:nth-child(3) { animation-delay: -0.8s; }
+  .paw-track .paw:nth-child(4) { animation-delay: -1.2s; }
+  .paw-track .paw:nth-child(5) { animation-delay: -1.6s; }
+  .paw-track .paw:nth-child(6) { animation-delay: -2.0s; }
+  .paw-track .paw:nth-child(7) { animation-delay: -2.4s; }
+  .paw-track .paw:nth-child(8) { animation-delay: -2.8s; }
+  .paw-track.flip { transform: scaleX(-1); }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .paw, .paw-track .paw { animation: none !important; }
+  }
+
+  /* ============ FLOATING WHATSAPP ============ */
+  .wa-float {
+    position: fixed;
+    bottom: 28px; left: 28px;
+    z-index: 100;
+    background: #25D366;
+    color: white;
+    padding: 18px 30px 18px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 19px;
+    display: flex; align-items: center; gap: 14px;
+    border: 3px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink), 0 14px 36px -8px rgba(37, 211, 102, 0.55);
+    transition: transform .15s ease, box-shadow .15s ease;
+    animation: waPulse 2.2s ease-in-out infinite;
+  }
+  .wa-float:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 var(--ink), 0 14px 36px -8px rgba(37, 211, 102, 0.55);
+    animation-play-state: paused;
+  }
+  .wa-float svg { width: 28px; height: 28px; flex-shrink: 0; }
+  .wa-float .wa-stack { display: flex; flex-direction: column; line-height: 1.05; gap: 3px; }
+  .wa-float .wa-stack .lead { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.9; }
+  .wa-float .wa-stack .main { font-size: 19px; font-weight: 900; }
+  .wa-float .ping {
+    position: absolute; top: -6px; right: -6px;
+    width: 18px; height: 18px; background: var(--terra); border-radius: 50%;
+    border: 3px solid white;
+    animation: pingAnim 1.4s ease-in-out infinite;
+  }
+  @keyframes waPulse {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-2px) scale(1.025); }
+  }
+  @keyframes pingAnim {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(230,57,70,0.6); }
+    50% { box-shadow: 0 0 0 10px rgba(230,57,70,0); }
+  }
+  @media (max-width: 700px) {
+    .wa-float { bottom: 16px; left: 16px; padding: 14px 22px 14px 18px; font-size: 16px; }
+    .wa-float svg { width: 24px; height: 24px; }
+    .wa-float .wa-stack .main { font-size: 16px; }
+    .wa-float .wa-stack .lead { font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SVG SPRITE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="paw" viewBox="0 0 26 26">
+    <ellipse cx="5" cy="11" rx="2.4" ry="3.4"/>
+    <ellipse cx="10.5" cy="7" rx="2.4" ry="3.4"/>
+    <ellipse cx="15.5" cy="7" rx="2.4" ry="3.4"/>
+    <ellipse cx="21" cy="11" rx="2.4" ry="3.4"/>
+    <path d="M13 14.5c-3.8 0-6 2.8-6 5.6 0 1.9 1.4 3.4 3.3 3.4 1.3 0 2-.8 2.7-.8s1.4.8 2.7.8c1.9 0 3.3-1.5 3.3-3.4 0-2.8-2.2-5.6-6-5.6z"/>
+  </symbol>
+</svg>
+
+<!-- =============== NAV =============== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo" style="text-decoration:none">
+      <span class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.5 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm5-3a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Zm5 .5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Zm5 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm-8 9c-3 0-6-2-6-4.5 0-2 2-3 4-4.5 1.2-.9 1.8-2.5 4-2.5s2.8 1.6 4 2.5c2 1.5 4 2.5 4 4.5 0 2.5-3 4.5-6 4.5Z"/></svg>
+      </span>
+      <span>
+        קייטנת המאלף הצעיר
+        <small>קיץ 2026 · פתח תקווה</small>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="#facility">המקום</a>
+      <a href="#features">למה אנחנו</a>
+      <a href="#schedule">סדר יום</a>
+      <a href="#pricing">מחיר</a>
+      <a href="#contact" class="btn btn-primary">להרשמה</a>
+    </div>
+  </div>
+</nav>
+
+<!-- =============== HERO =============== -->
+<header class="hero has-paws">
+  <div class="paw-trail" aria-hidden="true">
+    <!-- Right gutter floating paws -->
+    <span class="paw drift" style="top:6%; right:4%; width:60px; height:60px; color:var(--terra); --r:-18deg; --s:1; opacity:.85"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw bob"   style="top:24%; right:-1%; width:36px; height:36px; color:var(--sun-deep); --r:22deg; --s:1; opacity:.75"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw drift2" style="top:46%; right:2%; width:30px; height:30px; color:var(--forest); --r:8deg; --s:1; opacity:.7"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw pulse" style="bottom:14%; right:6%; width:50px; height:50px; color:var(--forest); --r:-8deg; --s:1; --o:.7"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <!-- Left gutter -->
+    <span class="paw bob2"  style="top:18%; left:-1%; width:48px; height:48px; color:var(--forest); --r:18deg; --s:1; opacity:.75"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw drift" style="top:44%; left:3%; width:32px; height:32px; color:var(--terra); --r:24deg; --s:1; opacity:.7"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw pulse" style="bottom:22%; left:1%; width:42px; height:42px; color:var(--terra); --r:-32deg; --s:1; --o:.7"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw spin"  style="bottom:5%; left:8%; width:26px; height:26px; color:var(--sun-deep); --s:1; opacity:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <!-- Walking paw track at bottom -->
+    <div class="paw-track" style="bottom:2%; left:0; width:100%; --dur:24s">
+      <span class="paw" style="width:22px;height:22px;color:var(--terra);--r:-8deg;--o:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
+      <span class="paw" style="width:22px;height:22px;color:var(--forest);--r:8deg;--o:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
+      <span class="paw" style="width:22px;height:22px;color:var(--terra);--r:-8deg;--o:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
+      <span class="paw" style="width:22px;height:22px;color:var(--forest);--r:8deg;--o:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
+      <span class="paw" style="width:22px;height:22px;color:var(--terra);--r:-8deg;--o:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
+      <span class="paw" style="width:22px;height:22px;color:var(--forest);--r:8deg;--o:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    </div>
+  </div>
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">
+        <svg style="width:24px;height:24px;color:var(--terra)" aria-hidden="true"><use href="#paw"/></svg>
+        ההרשמה לקייטנת הקיץ נפתחה!
+        <span class="dot"></span>
+      </span>
+      <h1 class="display">
+        קיץ עם<br/>
+        <span class="word-2">החברים</span><br/>
+        ה<span class="stamp">פרוותיים</span><br/>
+        שלנו 🐾
+      </h1>
+      <div class="cycle-patches">
+        <span class="cycle-patch"><span class="n">1</span><span class="d">2–6/8</span></span>
+        <span class="cycle-patch"><span class="n">2</span><span class="d">9–13/8</span></span>
+        <span class="cycle-patch"><span class="n">3</span><span class="d">16–20/8</span></span>
+      </div>
+      <p class="hero-sub">
+        קייטנת הקיץ הכי שווה בפתח תקווה — לגילאי <strong>8–12</strong>. שלושה מחזורים באוגוסט, חמישה ימים בשבוע, 08:00–13:00, עם <strong>אילוף ופקודות, אג'יליטי, יום בגן החי, יום בכלבייה וטרינרית, ערכת מאלף לכל ילד, ארוחת בוקר וכיבוד קיצי</strong> — ובסוף הכל, תעודת סיום.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">
+          להרשמה מוקדמת
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7" /></svg>
+        </a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-k">גילאים</span>
+          <span class="hero-meta-v">8–12</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-k">שעות</span>
+          <span class="hero-meta-v">08:00–13:00</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-k">מיקום</span>
+          <span class="hero-meta-v">פתח תקווה</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-k">טלפון</span>
+          <span class="hero-meta-v"><a href="tel:+972546789843" style="color:inherit;text-decoration:none;border-bottom:2px dashed var(--terra)">054-6789843</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="img/hero.jpg" alt="ילדה משחקת עם כלב גולדן רטריבר" />
+    </div>
+  </div>
+</header>
+
+<!-- =============== MARQUEE =============== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>
+      ערכת מאלף לכל ילד <span class="sep">✦</span>
+      קבוצות קטנות <span class="sep">✦</span>
+      צוות מקצועי <span class="sep">✦</span>
+      פעילויות יצירה <span class="sep">✦</span>
+      יום בגן החי <span class="sep">✦</span>
+      תעודות סיום <span class="sep">✦</span>
+    </span>
+    <span>
+      ערכת מאלף לכל ילד <span class="sep">✦</span>
+      קבוצות קטנות <span class="sep">✦</span>
+      צוות מקצועי <span class="sep">✦</span>
+      פעילויות יצירה <span class="sep">✦</span>
+      יום בגן החי <span class="sep">✦</span>
+      תעודות סיום <span class="sep">✦</span>
+    </span>
+  </div>
+</div>
+
+<!-- =============== FACILITY =============== -->
+<section id="facility" class="has-paws">
+  <div class="paw-trail" aria-hidden="true">
+    <span class="paw drift"  style="top:8%; right:3%; width:46px; height:46px; color:var(--terra); --r:-12deg; opacity:.5"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw bob"    style="top:42%; right:0%; width:32px; height:32px; color:var(--sun-deep); --r:18deg; opacity:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw pulse"  style="bottom:10%; right:5%; width:38px; height:38px; color:var(--forest); --r:8deg; --o:.5"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw drift2" style="top:12%; left:3%; width:42px; height:42px; color:var(--forest); --r:18deg; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw spin"   style="bottom:8%; left:2%; width:28px; height:28px; color:var(--terra); opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
+  </div>
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">המקום</div>
+      <h2 class="section-title">מתחם מסודר וממוזג — בלב פתח תקווה.</h2>
+      <p class="section-lead">כיתות ממוזגות, אזורי חוץ מוצלים, מטבחון, שירותים ומקלט מרווח.</p>
+    </div>
+
+    <div class="facility-grid">
+      <div class="fac-card">
+        <div>
+          <h3 style="font-size:26px;font-weight:900;margin-bottom:8px">כל מה שיש במתחם</h3>
+          <p style="color:var(--ink-soft)">סביבה שמתוכננת לילדים, להורים — ולכלבים שלנו.</p>
+          <div class="fac-features">
+            <div class="fac-feat">
+              <span class="fac-feat-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3v18"/></svg></span>
+              <span class="fac-feat-t">כיתות ממוזגות</span>
+            </div>
+            <div class="fac-feat">
+              <span class="fac-feat-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg></span>
+              <span class="fac-feat-t">אזורי חוץ מוצלים</span>
+            </div>
+            <div class="fac-feat">
+              <span class="fac-feat-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/></svg></span>
+              <span class="fac-feat-t">מטבחון מסודר</span>
+            </div>
+            <div class="fac-feat">
+              <span class="fac-feat-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 6h16M4 18h16"/></svg></span>
+              <span class="fac-feat-t">שירותים זמינים</span>
+            </div>
+            <div class="fac-feat">
+              <span class="fac-feat-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 9.5 8 10 4.6-.5 8-5 8-10V6l-8-4z"/></svg></span>
+              <span class="fac-feat-t">מקלט גדול ומרווח</span>
+            </div>
+            <div class="fac-feat">
+              <span class="fac-feat-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-8 8-13a8 8 0 1 0-16 0c0 5 8 13 8 13z"/></svg></span>
+              <span class="fac-feat-t">בלב פתח תקווה</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fac-card dark">
+        <div>
+          <div style="font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;opacity:.85;margin-bottom:10px">כתובת הקייטנה</div>
+          <div style="font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:42px;line-height:1.05;margin-bottom:6px">ישראל ישעיהו 10</div>
+          <div style="font-size:20px;font-weight:600;opacity:.92">פתח תקווה</div>
+          <p style="margin-top:24px;line-height:1.6;opacity:.9">כל הפרטים — המיקום, השעות, המחזורים. כל מה שצריך לדעת לפני שתגיעו.</p>
+        </div>
+        <div style="margin-top:36px;display:flex;gap:10px;flex-wrap:wrap">
+          <a href="#contact" class="btn btn-dark">לקבל הוראות הגעה</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="facility-grid" style="margin-top:24px">
+      <div class="fac-photo"><img src="img/collage-1.jpg" alt="ילדים נהנים עם כלבי גולדן"/></div>
+      <div class="fac-photo"><img src="img/collage-3.jpg" alt="פעילויות מגוונות בקייטנה"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FEATURES =============== -->
+<section id="features" class="features has-paws">
+  <div class="paw-trail" aria-hidden="true">
+    <span class="paw drift"  style="top:6%; right:3%; width:46px; height:46px; color:var(--terra); --r:-20deg; --s:1; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw bob"    style="top:30%; right:1%; width:34px; height:34px; color:var(--forest); --r:18deg; --s:1; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw pulse"  style="bottom:8%; right:5%; width:42px; height:42px; color:var(--sun-deep); --r:-10deg; --s:1; --o:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw drift2" style="top:14%; left:2%; width:38px; height:38px; color:var(--terra); --r:24deg; --s:1; opacity:.4"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw bob2"   style="top:48%; left:0%; width:30px; height:30px; color:var(--sun-deep); --r:8deg; --s:1; opacity:.5"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw spin"   style="bottom:14%; left:3%; width:50px; height:50px; color:var(--forest); --s:1; opacity:.35"><svg fill="currentColor"><use href="#paw"/></svg></span>
+  </div>
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">מה מייחד אותנו</div>
+      <h2 class="section-title">אז מה בתוכנית?</h2>
+      <p class="section-lead">תשעה חוויות שמחכות לכל ילד — אילוף, ספורט, טיולים, משחקים והמון אהבה כלבית.</p>
+    </div>
+
+    <div class="feat-grid">
+      <div class="feat-card c-yellow">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l2-7 4 14 2-7h7"/></svg></div>
+        <div class="feat-title">אילוף ופקודות</div>
+        <div class="feat-desc">בסיס שתוכלו להמשיך לתרגל בבית.</div>
+      </div>
+
+      <div class="feat-card c-pink">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18l4-4 4 4 4-8 4 4"/><path d="M3 21h18"/></svg></div>
+        <div class="feat-title">סדנת אג'יליטי</div>
+        <div class="feat-desc">משוכות, מנהרות, ספורט כלבני אמיתי.</div>
+      </div>
+
+      <div class="feat-card c-photo" style="grid-row: span 2; padding: 0; border: none; background: none; box-shadow: none;">
+        <div class="feat-photo"><img src="img/feat-frisbee.jpg" alt="ילדה משחקת פריזבי עם כלב"/></div>
+      </div>
+
+      <div class="feat-card c-blue">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2"/><circle cx="18" cy="12" r="2"/><path d="M8 12h8"/><path d="M5 9c0-3 2-4 2-4M19 9c0-3-2-4-2-4"/></svg></div>
+        <div class="feat-title">יום בגן החי</div>
+        <div class="feat-desc">טיול וחוויה מחוץ לקייטנה.</div>
+      </div>
+
+      <div class="feat-card c-lime">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12 11 14l4-5"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <div class="feat-title">יום בכלבייה וטרינרית</div>
+        <div class="feat-desc">טיפול נכון, חינוך והתנהלות.</div>
+      </div>
+
+      <div class="feat-card c-pink">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 1 1-3.5-6.9L21 3v6h-6"/></svg></div>
+        <div class="feat-title">שפת גוף ותקשורת</div>
+        <div class="feat-desc">לקרוא את הכלב — ולהבין אותו.</div>
+      </div>
+
+      <div class="feat-card c-yellow">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8V5a2 2 0 1 1 4 0M12 8V5a2 2 0 1 0-4 0M3 13h18"/></svg></div>
+        <div class="feat-title">ערכת מאלף לכל ילד</div>
+        <div class="feat-desc">אישית ומקצועית — במתנה.</div>
+      </div>
+
+      <div class="feat-card c-photo" style="padding: 0; border: none; background: none; box-shadow: none;">
+        <div class="feat-photo"><img src="img/feat-kiss.jpg" alt="ילדה מתחבקת עם כלב"/></div>
+      </div>
+
+      <div class="feat-card c-blue">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-4-7-12a7 7 0 0 1 14 0c0 8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <div class="feat-title">פעילויות יצירה</div>
+        <div class="feat-desc">סדנאות צבעוניות ומגוונות.</div>
+      </div>
+
+      <div class="feat-card c-lime">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2-4 5-6 9-6s7 2 9 6c-2 4-5 6-9 6s-7-2-9-6z"/><path d="M8 8l2 2M16 16l-2-2"/></svg></div>
+        <div class="feat-title">משחקי מים ופרסים</div>
+        <div class="feat-desc">כיף קיצי, פרסים והמון צחוקים.</div>
+      </div>
+
+      <div class="feat-card c-pink">
+        <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+        <div class="feat-title">הסברה על אימוץ</div>
+        <div class="feat-desc">ערכי אהבה ואחריות לבעלי חיים.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== SCHEDULE =============== -->
+<section id="schedule" class="schedule has-paws">
+  <div class="paw-trail" aria-hidden="true">
+    <span class="paw drift" style="top:8%; left:3%; width:50px; height:50px; color:var(--sun); --r:-22deg; --s:1; opacity:.35"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw bob" style="top:40%; left:0%; width:34px; height:34px; color:var(--terra); --r:14deg; --s:1; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw pulse" style="bottom:12%; left:4%; width:32px; height:32px; color:var(--sun); --r:34deg; --s:1; --o:.4"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw drift2" style="top:18%; right:3%; width:42px; height:42px; color:var(--terra); --r:18deg; --s:1; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw bob2" style="top:55%; right:1%; width:30px; height:30px; color:var(--forest); --r:-12deg; --s:1; opacity:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw spin" style="bottom:8%; right:5%; width:38px; height:38px; color:var(--sun); --s:1; opacity:.3"><svg fill="currentColor"><use href="#paw"/></svg></span>
+  </div>
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">סדר יום לדוגמה</div>
+      <h2 class="section-title">איך נראה יום בקייטנה?</h2>
+      <p class="section-lead">כל יום שונה — אבל זה מבנה היום הקבוע שלנו, מהתכנסות ועד איסוף.</p>
+    </div>
+
+    <div class="sched-wrap">
+      <div class="sched-list">
+        <div class="sched-row"><span class="sched-time">08:00–08:30</span><span class="sched-dot"></span><span class="sched-act">התכנסות, פתיחת בוקר ובניית הקבוצה</span></div>
+        <div class="sched-row"><span class="sched-time">08:30–10:00</span><span class="sched-dot"></span><span class="sched-act">פעילות או הרצאה בנושא כלבנות</span></div>
+        <div class="sched-row"><span class="sched-time">10:00–10:30</span><span class="sched-dot"></span><span class="sched-act">ארוחת בוקר — ארוחת עשר כלולה</span></div>
+        <div class="sched-row"><span class="sched-time">10:30–12:00</span><span class="sched-dot"></span><span class="sched-act">עבודה מעשית עם הכלבים והפעלות</span></div>
+        <div class="sched-row"><span class="sched-time">12:00–12:30</span><span class="sched-dot"></span><span class="sched-act">התרעננות וכיבוד קיצי, משחקי חברה</span></div>
+        <div class="sched-row"><span class="sched-time">12:30–13:00</span><span class="sched-dot"></span><span class="sched-act">פעילות יצירה וסיכום יומי</span></div>
+        <div class="sched-row"><span class="sched-time">13:00–13:30</span><span class="sched-dot"></span><span class="sched-act">איסוף הילדים</span></div>
+      </div>
+
+      <aside class="sched-side">
+        <div class="sched-side-kicker">המוטו שלנו</div>
+        <h3>פחות זמן מסך, יותר זמן עם זנב.</h3>
+        <p>כל יום בקייטנה משלב בין למידה אמיתית של כלבנות לכיף טהור — תרגולים מרגשים, משחקי מים, יצירה, וכמובן הרבה אהבה כלבית.</p>
+        <div class="meta">
+          <div><span>ארוחת עשר</span><strong>כלולה</strong></div>
+          <div><span>כיבוד קיצי</span><strong>בכל יום</strong></div>
+          <div><span>קבוצות</span><strong>קטנות</strong></div>
+          <div><span>כיתות</span><strong>ממוזגות</strong></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- =============== PRICING =============== -->
+<section id="pricing" class="pricing has-paws">
+  <div class="paw-trail" aria-hidden="true">
+    <span class="paw drift" style="top:14%; right:4%; width:58px; height:58px; color:var(--terra); --r:-14deg; --s:1; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw bob" style="top:46%; right:0%; width:32px; height:32px; color:var(--sun-deep); --r:40deg; --s:1; opacity:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw pulse" style="bottom:18%; right:6%; width:38px; height:38px; color:var(--forest); --r:8deg; --s:1; --o:.5"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw drift2" style="top:18%; left:3%; width:42px; height:42px; color:var(--forest); --r:22deg; --s:1; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw bob2" style="bottom:14%; left:1%; width:48px; height:48px; color:var(--terra); --r:-18deg; --s:1; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw spin" style="top:54%; left:5%; width:28px; height:28px; color:var(--sun-deep); --s:1; opacity:.5"><svg fill="currentColor"><use href="#paw"/></svg></span>
+  </div>
+  <div class="container">
+    <div class="section-head" style="text-align:center;margin-inline:auto;max-width:920px">
+      <div class="section-kicker">מבצע!</div>
+      <h2 class="section-title" style="color:var(--terra)">🔥 הרשמה מוקדמת נפתחה!</h2>
+      <p class="section-lead">מספר המקומות מוגבל — מומלץ למהר.</p>
+    </div>
+
+    <div class="price-card">
+      <div>
+        <span class="price-tag">מחיר מלא · עם כל ההטבות</span>
+        <div class="price-main"><span class="sym">₪</span>2,000</div>
+        <p class="price-sub">לקייטנה המלאה · ארוחת עשר וכיבוד קיצי כלולים · ערכת מאלף לכל ילד.</p>
+        <div style="margin-top:22px;padding:14px 18px;background:var(--cream);border-radius:14px;font-size:14px;font-weight:600">
+          🐾 <span style="color:var(--terra)">הנחה מיוחדת</span> לרישום של שני אחים — מתבצעת במעמד ההרשמה.
+        </div>
+        <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap">
+          <a href="tel:+972546789843" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>
+            ליצור קשר — אליס
+          </a>
+          <a href="https://wa.me/972546789843" class="btn btn-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2.1-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3 0 1.4 1 2.7 1.2 2.9.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg>
+            לדבר איתנו בוואטסאפ
+          </a>
+        </div>
+      </div>
+
+      <ul class="price-list">
+        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">5 ימי קייטנה מלאים בכל מחזור</span></li>
+        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">ערכת מאלף צעיר אישית הביתה</span></li>
+        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">יום בגן החי + יום בכלבייה וטרינרית</span></li>
+        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">סדנת אגיליטי מקצועית</span></li>
+        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">ארוחת עשר וכיבוד קיצי בכל יום</span></li>
+        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">טקס סיום, פרסים ותעודת מאלף צעיר</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FINAL CTA =============== -->
+<section id="contact" class="final-cta has-paws">
+  <div class="paw-trail" aria-hidden="true">
+    <span class="paw drift"  style="top:10%; right:5%; width:48px; height:48px; color:var(--sun); --r:-14deg; opacity:.35"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw bob"    style="top:38%; right:0%; width:32px; height:32px; color:var(--terra); --r:20deg; opacity:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw drift2" style="bottom:14%; right:4%; width:36px; height:36px; color:var(--sun); --r:8deg; opacity:.4"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw drift"  style="top:14%; left:4%; width:36px; height:36px; color:var(--terra); --r:18deg; opacity:.5"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw pulse"  style="top:48%; left:1%; width:30px; height:30px; color:var(--sun); --r:-22deg; --o:.4"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw spin"   style="bottom:8%; left:5%; width:42px; height:42px; color:var(--sun); opacity:.3"><svg fill="currentColor"><use href="#paw"/></svg></span>
+  </div>
+  <div class="container">
+    <div class="section-kicker" style="color:var(--sun)">לפרטים נוספים והרשמה</div>
+    <h2 class="section-title">מספר המקומות מוגבל. נשמח לדבר.</h2>
+    <p class="final-cta-lead">השאירו פרטים בוואטסאפ ונחזור אליכם תוך 24 שעות עם כל המידע — תאריכים, גילאים מדויקים והרשמה.</p>
+    <div class="final-cta-btns">
+      <a href="https://wa.me/972546789843" class="btn btn-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2.1-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3 0 1.4 1 2.7 1.2 2.9.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg>
+        להרשמה בוואטסאפ
+      </a>
+      <a href="tel:+972546789843" class="btn btn-ghost">לחיוג ישיר</a>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FOOTER =============== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div style="font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:22px;margin-bottom:10px">קייטנת המאלף הצעיר 🐾</div>
+        <p>קייטנת קיץ לילדים בעולם הכלבנות. אילוף, יצירה, חיבור ואחריות — קיץ אחד שיישאר לכל החיים.</p>
+      </div>
+      <div>
+        <h4>צור קשר</h4>
+        <a href="https://wa.me/972546789843">וואטסאפ</a>
+        <a href="tel:+972546789843">חיוג ישיר</a>
+      </div>
+      <div>
+        <h4>כתובת</h4>
+        <a>ישראל ישעיהו 10</a>
+        <a>פתח תקווה</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 קייטנת המאלף הצעיר. כל הזכויות שמורות.</span>
+      <span>נבנה באהבה לילדים ולכלבים</span>
+    </div>
+  </div>
+</footer>
+
+<!-- =============== FLOATING WHATSAPP =============== -->
+<a href="https://wa.me/972546789843" class="wa-float" aria-label="פתיחת וואטסאפ">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2.1-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3 0 1.4 1 2.7 1.2 2.9.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg>
+  <span class="wa-stack">
+    <span class="lead">להרשמה ופרטים</span>
+    <span class="main">לדבר איתנו בוואטסאפ</span>
+  </span>
+  <span class="ping"></span>
+</a>
+
+</body>
+</html>
