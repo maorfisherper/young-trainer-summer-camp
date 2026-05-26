@@ -156,9 +156,9 @@
     justify-content: flex-start;
   }
   .cycle-patch {
-    display: inline-flex; align-items: center; gap: 8px;
+    display: inline-flex; flex-direction: column; align-items: center; gap: 4px;
     background: var(--cream); border: 2.5px solid var(--ink);
-    padding: 9px 14px 9px 16px; border-radius: 12px;
+    padding: 10px 16px; border-radius: 12px;
     box-shadow: 3px 3px 0 var(--ink);
     font-weight: 800; line-height: 1;
     transition: transform .15s ease;
@@ -169,18 +169,15 @@
   .cycle-patch:nth-child(2) { background: #cfe6ff; transform: rotate(1deg); }
   .cycle-patch:nth-child(3) { background: #ffd9d9; transform: rotate(-0.5deg); }
   .cycle-patch:hover { transform: translate(-1px, -1px) rotate(0deg); }
-  .cycle-patch .n {
-    background: var(--ink); color: var(--cream);
-    font-family: 'Frank Ruhl Libre', serif; font-weight: 900;
-    width: 22px; height: 22px; border-radius: 50%;
-    display: inline-grid; place-items: center;
-    font-size: 13px; flex-shrink: 0; align-self: center;
-  }
   .cycle-patch .d {
     font-family: 'Frank Ruhl Libre', serif;
     font-weight: 900; font-size: 20px;
     direction: ltr; color: var(--ink);
     letter-spacing: -0.01em;
+  }
+  .cycle-patch .m {
+    font-size: 11px; font-weight: 700; color: var(--ink-soft);
+    letter-spacing: 0.06em; text-transform: none;
   }
   @media (max-width: 900px) {
     .hero-grid > div:first-child .cycle-patches { justify-content: center; }
@@ -189,7 +186,6 @@
     .cycle-patches { gap: 6px; }
     .cycle-patch { padding: 7px 10px; gap: 6px; box-shadow: 2px 2px 0 var(--ink); border-width: 2px; }
     .cycle-patch .d { font-size: 14px; }
-    .cycle-patch .n { width: 18px; height: 18px; font-size: 11px; }
   }
   @keyframes pulse {
     0%, 100% { opacity: 1; transform: scale(1); }
@@ -214,8 +210,8 @@
   .hero-meta { display: flex; gap: 28px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line); }
   @media (max-width: 700px) { .hero-meta { gap: 18px; padding-top: 20px; } .hero-meta-item { min-width: 90px; flex: 1 1 40%; } }
   .hero-meta-item { display: flex; flex-direction: column; }
-  .hero-meta-k { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px; }
-  .hero-meta-v { font-size: 17px; font-weight: 700; }
+  .hero-meta-k { font-size: 14px; font-weight: 700; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+  .hero-meta-v { font-size: 21px; font-weight: 800; }
 
   /* Hero photo */
   .hero-photo {
@@ -507,18 +503,18 @@
   }
   .fac-card.dark { background: var(--terra); color: white; border-color: var(--terra); }
   .fac-features {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
     margin-top: 28px;
   }
-  .fac-feat { display: flex; gap: 12px; align-items: flex-start; }
+  .fac-feat { display: flex; gap: 14px; align-items: center; }
   .fac-feat-i {
-    width: 32px; height: 32px; border-radius: 8px;
+    width: 44px; height: 44px; border-radius: 12px;
     background: var(--cream-2); color: var(--forest);
     display: grid; place-items: center; flex-shrink: 0;
   }
   .fac-card.dark .fac-feat-i { background: rgba(255,255,255,0.18); color: white; }
-  .fac-feat-i svg { width: 18px; height: 18px; }
-  .fac-feat-t { font-size: 15px; font-weight: 600; line-height: 1.3; }
+  .fac-feat-i svg { width: 22px; height: 22px; }
+  .fac-feat-t { font-size: 17px; font-weight: 700; line-height: 1.3; }
   .fac-photo {
     aspect-ratio: 4/3; border-radius: 24px; overflow: hidden;
   }
@@ -866,6 +862,40 @@
     .foot-bottom { flex-direction: column; align-items: center; text-align: center; }
   }
 
+  /* Center all text on mobile */
+  @media (max-width: 700px) {
+    .section-head { text-align: center; margin-inline: auto; }
+    .hero-sub { text-align: center; }
+    .fac-card { text-align: center; }
+    .fac-feat { flex-direction: column; align-items: center; text-align: center; }
+    .price-card { text-align: center; }
+    .price-main { text-align: center; direction: rtl; }
+    .price-sub { text-align: center; }
+    .price-list li { justify-content: flex-start; }
+    .sched-act { text-align: center; }
+    .sched-time { text-align: center; }
+    .foot-grid { text-align: center; }
+    .foot-grid a { text-align: center; }
+    .sched-side { text-align: center; }
+    .sched-side .meta div { flex-direction: column; align-items: center; gap: 2px; }
+    .final-cta { text-align: center; }
+    .about-grid { text-align: center; }
+  }
+
+  /* Hero bullets */
+  .hero-bullets {
+    list-style: none; padding: 0; margin: 0 0 28px;
+    display: flex; gap: 12px; flex-wrap: wrap;
+  }
+  .hero-bullets li {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--ink); color: var(--cream);
+    padding: 9px 16px 9px 14px; border-radius: 999px;
+    font-size: 16px; font-weight: 700;
+  }
+  .hero-bullets li svg { width: 18px; height: 18px; color: var(--sun); flex-shrink: 0; }
+  @media (max-width: 900px) { .hero-bullets { justify-content: center; } }
+
 </style>
 </head>
 <body>
@@ -940,13 +970,17 @@
         שלנו 🐾
       </h1>
       <div class="cycle-patches">
-        <span class="cycle-patch"><span class="n">1</span><span class="d">2–6/8</span></span>
-        <span class="cycle-patch"><span class="n">2</span><span class="d">9–13/8</span></span>
-        <span class="cycle-patch"><span class="n">3</span><span class="d">16–20/8</span></span>
+        <span class="cycle-patch"><span class="m">מחזור א׳</span><span class="d">2–6/8</span></span>
+        <span class="cycle-patch"><span class="m">מחזור ב׳</span><span class="d">9–13/8</span></span>
+        <span class="cycle-patch"><span class="m">מחזור ג׳</span><span class="d">16–20/8</span></span>
       </div>
       <p class="hero-sub">
-        קייטנת הקיץ הכי שווה בפתח תקווה — לגילאי <strong>8–12</strong>. שלושה מחזורים באוגוסט, חמישה ימים בשבוע, 08:00–13:00, עם <strong>אילוף ופקודות, אג'יליטי, יום בגן החי, יום בכלבייה וטרינרית, ערכת מאלף לכל ילד, ארוחת בוקר וכיבוד קיצי</strong> — ובסוף הכל, תעודת סיום.
+        קייטנת הקיץ הכי שווה בפתח תקווה — לגילאי <strong>8–12</strong>. שלושה מחזורים באוגוסט, חמישה ימים בשבוע, 08:00–13:30, עם <strong>אילוף ופקודות, אג'יליטי, יום בגן החי, יום בכלבייה וטרינרית, ערכת מאלף לכל ילד, ארוחת בוקר וכיבוד קיצי</strong> — ובסוף הכל, תעודת סיום.
       </p>
+      <ul class="hero-bullets">
+        <li><svg fill="currentColor"><use href="#paw"/></svg>לגילאי 8–12</li>
+        <li><svg fill="currentColor"><use href="#paw"/></svg>ערכת מאלף לכל ילד</li>
+      </ul>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary">
           להרשמה מוקדמת
@@ -960,7 +994,7 @@
         </div>
         <div class="hero-meta-item">
           <span class="hero-meta-k">שעות</span>
-          <span class="hero-meta-v">08:00–13:00</span>
+          <span class="hero-meta-v">08:00–13:30</span>
         </div>
         <div class="hero-meta-item">
           <span class="hero-meta-k">מיקום</span>
@@ -1001,6 +1035,53 @@
   </div>
 </div>
 
+<!-- =============== PRICING =============== -->
+<section id="pricing" class="pricing has-paws">
+  <div class="paw-trail" aria-hidden="true">
+    <span class="paw drift" style="top:14%; right:4%; width:58px; height:58px; color:var(--terra); --r:-14deg; --s:1; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw bob" style="top:46%; right:0%; width:32px; height:32px; color:var(--sun-deep); --r:40deg; --s:1; opacity:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw pulse" style="bottom:18%; right:6%; width:38px; height:38px; color:var(--forest); --r:8deg; --s:1; --o:.5"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw drift2" style="top:18%; left:3%; width:42px; height:42px; color:var(--forest); --r:22deg; --s:1; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw bob2" style="bottom:14%; left:1%; width:48px; height:48px; color:var(--terra); --r:-18deg; --s:1; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
+    <span class="paw spin" style="top:54%; left:5%; width:28px; height:28px; color:var(--sun-deep); --s:1; opacity:.5"><svg fill="currentColor"><use href="#paw"/></svg></span>
+  </div>
+  <div class="container">
+    <div class="section-head" style="text-align:center;margin-inline:auto;max-width:920px">
+      <h2 class="section-title" style="color:var(--terra)">🔥 הרשמה מוקדמת נפתחה!</h2>
+      <p class="section-lead">מספר המקומות מוגבל — מומלץ למהר.</p>
+    </div>
+
+    <div class="price-card">
+      <div>
+
+        <div class="price-main"><span class="sym">₪</span>2,000</div>
+        <p class="price-sub">לקייטנה המלאה · ארוחת עשר וכיבוד קיצי כלולים · ערכת מאלף לכל ילד.</p>
+        <div style="margin-top:22px;padding:14px 18px;background:var(--cream);border-radius:14px;font-size:14px;font-weight:600">
+          🐾 <span style="color:var(--terra)">הנחה מיוחדת</span> לרישום של שני אחים — מתבצעת במעמד ההרשמה.
+        </div>
+        <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap">
+          <a href="tel:+972546789843" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>
+            ליצירת קשר - אליס
+          </a>
+          <a href="https://wa.me/972546789843" class="btn btn-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2.1-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3 0 1.4 1 2.7 1.2 2.9.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg>
+            ליצירת קשר בוואטסאפ
+          </a>
+        </div>
+      </div>
+
+      <ul class="price-list">
+        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">ערכת מאלף צעיר אישית הביתה</span></li>
+        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">יום בגן החי + יום בכלבייה וטרינרית</span></li>
+        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">סדנת אגיליטי מקצועית</span></li>
+        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">ארוחת עשר וכיבוד קיצי בכל יום</span></li>
+        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">טקס סיום, פרסים ותעודת מאלף צעיר</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- =============== FACILITY =============== -->
 <section id="facility" class="has-paws">
   <div class="paw-trail" aria-hidden="true">
@@ -1014,14 +1095,12 @@
     <div class="section-head">
       <div class="section-kicker">המקום</div>
       <h2 class="section-title">מתחם מסודר וממוזג — בלב פתח תקווה.</h2>
-      <p class="section-lead">כיתות ממוזגות, אזורי חוץ מוצלים, מטבחון, שירותים ומקלט מרווח.</p>
     </div>
 
     <div class="facility-grid">
       <div class="fac-card">
         <div>
           <h3 style="font-size:26px;font-weight:900;margin-bottom:8px">כל מה שיש במתחם</h3>
-          <p style="color:var(--ink-soft)">סביבה שמתוכננת לילדים, להורים — ולכלבים שלנו.</p>
           <div class="fac-features">
             <div class="fac-feat">
               <span class="fac-feat-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3v18"/></svg></span>
@@ -1085,7 +1164,6 @@
     <div class="section-head">
       <div class="section-kicker">מה מייחד אותנו</div>
       <h2 class="section-title">אז מה בתוכנית?</h2>
-      <p class="section-lead">תשעה חוויות שמחכות לכל ילד — אילוף, ספורט, טיולים, משחקים והמון אהבה כלבית.</p>
     </div>
 
     <div class="feat-grid">
@@ -1099,10 +1177,6 @@
         <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18l4-4 4 4 4-8 4 4"/><path d="M3 21h18"/></svg></div>
         <div class="feat-title">סדנת אג'יליטי</div>
         <div class="feat-desc">משוכות, מנהרות, ספורט כלבני אמיתי.</div>
-      </div>
-
-      <div class="feat-card c-photo" style="grid-row: span 2; padding: 0; border: none; background: none; box-shadow: none;">
-        <div class="feat-photo"><img src="img/feat-frisbee.jpg" alt="ילדה משחקת פריזבי עם כלב"/></div>
       </div>
 
       <div class="feat-card c-blue">
@@ -1127,10 +1201,6 @@
         <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8V5a2 2 0 1 1 4 0M12 8V5a2 2 0 1 0-4 0M3 13h18"/></svg></div>
         <div class="feat-title">ערכת מאלף לכל ילד</div>
         <div class="feat-desc">אישית ומקצועית — במתנה.</div>
-      </div>
-
-      <div class="feat-card c-photo" style="padding: 0; border: none; background: none; box-shadow: none;">
-        <div class="feat-photo"><img src="img/feat-kiss.jpg" alt="ילדה מתחבקת עם כלב"/></div>
       </div>
 
       <div class="feat-card c-blue">
@@ -1193,54 +1263,6 @@
           <div><span>כיתות</span><strong>ממוזגות</strong></div>
         </div>
       </aside>
-    </div>
-  </div>
-</section>
-
-<!-- =============== PRICING =============== -->
-<section id="pricing" class="pricing has-paws">
-  <div class="paw-trail" aria-hidden="true">
-    <span class="paw drift" style="top:14%; right:4%; width:58px; height:58px; color:var(--terra); --r:-14deg; --s:1; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
-    <span class="paw bob" style="top:46%; right:0%; width:32px; height:32px; color:var(--sun-deep); --r:40deg; --s:1; opacity:.55"><svg fill="currentColor"><use href="#paw"/></svg></span>
-    <span class="paw pulse" style="bottom:18%; right:6%; width:38px; height:38px; color:var(--forest); --r:8deg; --s:1; --o:.5"><svg fill="currentColor"><use href="#paw"/></svg></span>
-    <span class="paw drift2" style="top:18%; left:3%; width:42px; height:42px; color:var(--forest); --r:22deg; --s:1; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
-    <span class="paw bob2" style="bottom:14%; left:1%; width:48px; height:48px; color:var(--terra); --r:-18deg; --s:1; opacity:.45"><svg fill="currentColor"><use href="#paw"/></svg></span>
-    <span class="paw spin" style="top:54%; left:5%; width:28px; height:28px; color:var(--sun-deep); --s:1; opacity:.5"><svg fill="currentColor"><use href="#paw"/></svg></span>
-  </div>
-  <div class="container">
-    <div class="section-head" style="text-align:center;margin-inline:auto;max-width:920px">
-      <h2 class="section-title" style="color:var(--terra)">🔥 הרשמה מוקדמת נפתחה!</h2>
-      <p class="section-lead">מספר המקומות מוגבל — מומלץ למהר.</p>
-    </div>
-
-    <div class="price-card">
-      <div>
-
-        <div class="price-main"><span class="sym">₪</span>2,000</div>
-        <p class="price-sub">לקייטנה המלאה · ארוחת עשר וכיבוד קיצי כלולים · ערכת מאלף לכל ילד.</p>
-        <div style="margin-top:22px;padding:14px 18px;background:var(--cream);border-radius:14px;font-size:14px;font-weight:600">
-          🐾 <span style="color:var(--terra)">הנחה מיוחדת</span> לרישום של שני אחים — מתבצעת במעמד ההרשמה.
-        </div>
-        <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap">
-          <a href="tel:+972546789843" class="btn btn-primary">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>
-            ליצירת קשר - אליס
-          </a>
-          <a href="https://wa.me/972546789843" class="btn btn-wa">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2.1-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3 0 1.4 1 2.7 1.2 2.9.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"/></svg>
-            ליצירת קשר בוואטסאפ
-          </a>
-        </div>
-      </div>
-
-      <ul class="price-list">
-        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">5 ימי קייטנה מלאים בכל מחזור</span></li>
-        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">ערכת מאלף צעיר אישית הביתה</span></li>
-        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">יום בגן החי + יום בכלבייה וטרינרית</span></li>
-        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">סדנת אגיליטי מקצועית</span></li>
-        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">ארוחת עשר וכיבוד קיצי בכל יום</span></li>
-        <li><span class="check"><svg fill="currentColor" aria-hidden="true"><use href="#paw"/></svg></span><span class="price-list-text">טקס סיום, פרסים ותעודת מאלף צעיר</span></li>
-      </ul>
     </div>
   </div>
 </section>
