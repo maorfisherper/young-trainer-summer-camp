@@ -285,7 +285,7 @@
   .section-head { margin-bottom: 56px; max-width: 760px; }
   @media (max-width: 700px) { .section-head { margin-bottom: 36px; } }
   .section-kicker { font-size: 13px; font-weight: 700; color: var(--terra); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; }
-  .section-title { font-size: clamp(36px, 4.5vw, 60px); font-weight: 900; letter-spacing: -0.02em; line-height: 1; margin-bottom: 18px; }
+  .section-title { font-size: clamp(26px, 4.5vw, 60px); font-weight: 900; letter-spacing: -0.02em; line-height: 1.08; margin-bottom: 18px; }
   .section-lead { font-size: 19px; color: var(--ink-soft); line-height: 1.5; }
 
   /* ============ ABOUT ============ */
@@ -839,10 +839,12 @@
     .paw-trail .paw { opacity: 0.2 !important; }
   }
 
-  /* Facility: reduce card padding, collapse feature list to 1 col */
+  /* Facility: reduce card padding, keep 2x2 grid */
   @media (max-width: 700px) {
     .fac-card { padding: 24px; }
-    .fac-features { grid-template-columns: 1fr; gap: 12px; }
+    .fac-features { grid-template-columns: 1fr 1fr; gap: 18px; }
+    .fac-feat { flex-direction: column; align-items: center; text-align: center; }
+    .fac-feat-t { font-size: 16px; }
   }
 
   /* Schedule side card: reduce padding */
@@ -854,6 +856,8 @@
   /* Pricing: tighter padding on small screens */
   @media (max-width: 500px) {
     .price-card { padding: 24px 20px; border-radius: 22px; gap: 20px; }
+    .price-sub { font-size: 14px; }
+    .price-main { font-size: clamp(52px, 14vw, 96px); }
   }
 
   /* Final CTA: stack buttons full-width on mobile */
